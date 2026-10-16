@@ -1,0 +1,87 @@
+# Liste des categories pour le tri des photos par vehicule (Allemagne 1939-1945)
+# Une categorie par ligne -> le nom de la ligne devient le nom du dossier de destination.
+# Les lignes vides et celles commencant par # sont ignorees.
+# Le modele ne peut choisir QUE dans cette liste (liste fermee).
+
+# --- Chars (Panzerkampfwagen) ---
+Panzer I
+Panzer I Ausf. F
+Panzer II
+Panzer II Luchs
+Panzer 35(t)
+Panzer 38(t)
+Panzer III
+Panzer IV
+Panther (Panzer V)
+Tiger I
+Tiger II (Konigstiger)
+Maus (Panzer VIII)
+
+# --- Canons d'assaut (Sturmgeschutz) ---
+StuG III
+StuG IV
+StuH 42
+Brummbar
+Sturmtiger
+
+# --- Chasseurs de chars (Panzerjager / Jagdpanzer) ---
+Jagdpanzer 38(t) Hetzer
+Jagdpanzer IV
+Jagdpanther
+Jagdtiger
+Ferdinand-Elefant
+Nashorn (Hornisse)
+Marder I
+Marder II
+Marder III
+Sturer Emil
+
+# --- Automitrailleuses a roues (Panzerspahwagen) ---
+Sd.Kfz. 221
+Sd.Kfz. 222
+Sd.Kfz. 223
+Sd.Kfz. 231 (6-rad)
+Sd.Kfz. 231-232 (8-rad)
+Sd.Kfz. 233
+Sd.Kfz. 234 Puma
+Sd.Kfz. 247
+
+# --- Semi-chenilles (Halbkettenfahrzeuge) ---
+Sd.Kfz. 250
+Sd.Kfz. 251
+Sd.Kfz. 253
+Sd.Kfz. 4 Maultier
+Sd.Kfz. 6
+Sd.Kfz. 7 (halftrack)
+Sd.Kfz. 8
+Sd.Kfz. 9 Famo
+Sd.Kfz. 10
+Sd.Kfz. 11
+
+# --- Voitures et utilitaires legers ---
+Kubelwagen (VW Type 82)
+Schwimmwagen (VW Type 166)
+Horch 108
+Mercedes G4
+
+# --- Camions ---
+Opel Blitz
+Krupp Protze
+Mercedes-Benz L3000
+MAN
+Steyr 1500A
+Henschel
+
+# --- Motocyclettes ---
+Motocyclette
+BMW R75
+Zundapp KS 750
+BMW R12
+
+# --- Vehicules captures (Beute) ---
+T-34 (Beute)
+Beute (vehicule capture)
+
+# --- Divers ---
+Vehicule allemand non identifie
+_Divers (non-vehicule)

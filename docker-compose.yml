@@ -1,0 +1,21 @@
+services:
+  tri-vehicules:
+    build: .
+    image: tri-vehicules:latest
+    container_name: tri-vehicules
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      OPENROUTER_MODEL: ${OPENROUTER_MODEL:-deepseek/deepseek-v4.1-flash}
+      OUT_DIR: /out
+    volumes:
+      - ${PHOTO_DIR:-./photos}:/data
+      - ${OUT_DIR:-./categories}:/out
+    command:
+      - --source
+      - /data
+      - --out
+      - /out
+      - --workers
+      - "4"
