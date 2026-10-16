@@ -78,6 +78,9 @@ BMW R75
 Zundapp KS 750
 BMW R12
 
+# --- Infanterie (soldats) ---
+Infanterie
+
 # --- Vehicules captures (Beute) ---
 T-34 (Beute)
 Beute (vehicule capture)

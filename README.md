@@ -72,7 +72,7 @@ docker run --rm --name tri-vehicules -e OPENROUTER_API_KEY=$env:OPENROUTER_API_K
 | `--verify-name` | `_A_VERIFIER` | Dossier des cas à revérifier (faible confiance). |
 | `--fail-name` | `a_trier` | Dossier des échecs (erreurs API). |
 | `--manifest` | `<out>/_tri_manifest.csv` | Chemin du manifeste. |
-| `--recursive` | désactivé | Parcourt les sous-dossiers. |
+| `--recursive` | **activé** | Parcourt aussi les sous-dossiers (`--no-recursive` pour désactiver). |
 | `--limit` | `0` | Ne traite que les N premières images. |
 | `--dry-run` | désactivé | Simule, sans déplacer. |
 | `--timeout` | `120` | Délai max par requête (s). |

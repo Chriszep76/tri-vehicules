@@ -52,9 +52,13 @@ def build_system_prompt(categories: list) -> str:
     return (
         "Tu es un expert en vehicules militaires allemands de la Seconde Guerre mondiale (1939-1945). "
         "On te presente une photo. Identifie le vehicule principal et classe-le dans EXACTEMENT une "
-        "des categories de la liste ci-dessous. Si aucun vehicule militaire allemand n'est identifiable, "
-        f'choisis "{NON_VEHICLE}".\n\n'
+        "des categories de la liste ci-dessous. "
+        f"S'il n'y a pas de vehicule identifiable mais des soldats d'infanterie, choisis \"Infanterie\". "
+        f"Si aucun element militaire allemand n'est identifiable, choisis \"{NON_VEHICLE}\".\n\n"
         f"Liste des categories:\n{listing}\n\n"
+        "Aide a l'identification: pour distinguer le Panzer III du Panzer IV, compte les galets superieurs "
+        "(roues de retour, en haut de la chenille) : 3 galets superieurs = Panzer III, 4 galets superieurs = Panzer IV. "
+        "Utilise ce repere des qu'il est visible.\n\n"
         "Regles: ne devine pas ; en cas de doute entre plusieurs modeles, choisis le plus probable et "
         "mets une confiance basse. Reponds UNIQUEMENT par un objet JSON valide, sans texte autour, au format: "
         '{"categorie": "<nom exact copie depuis la liste>", "confiance": 0.0-1.0, "raison": "courte explication en francais"}. '
@@ -195,7 +199,8 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=120)
     parser.add_argument("--retries", type=int, default=3)
     parser.add_argument("--backoff", type=float, default=2.0)
-    parser.add_argument("--recursive", action="store_true")
+    parser.add_argument("--recursive", action=argparse.BooleanOptionalAction, default=True,
+                        help="Parcourt aussi les sous-dossiers (actif par defaut ; --no-recursive pour desactiver).")
     parser.add_argument("--limit", type=int, default=0)
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--verify-name", default=VERIFY_DIR)
